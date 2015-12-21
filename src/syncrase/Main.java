@@ -1,11 +1,16 @@
 package syncrase;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import generators.css.BlurContainer;
 import generators.css.Color;
 import generators.css.DistributionAbstract;
 
 public class Main {
 
+	private static final Logger logger = LogManager.getLogger(Main.class);
+	
 	public static void main(String[] args) {
 		// StringAnalysis.keywordsAnalisys(
 		// "morethanschool, More Than School, more than school, Soutien
@@ -50,7 +55,8 @@ public class Main {
 		// TODO blinder les entrées de fonctions + javadoc
 		// TODO compiler le jar
 		// TODO Interface graphique avec formulaire pour générer le box-shadow
-		System.out.println(BlurContainer.generateBoxShadow(new Color("#000000"), new Color("#FFFFFF"), 100, 0.5, 0.5,
-				0.1, DistributionAbstract.BOTTOMRIGHT + DistributionAbstract.BOTTOMLEFT));
+		logger.error("Initial logger test");
+//		System.out.println(BlurContainer.generateBoxShadow(new Color("#000000"), new Color("#FFFFFF"), 100, 0.5, 0.5,
+//				0.1, DistributionAbstract.BOTTOMRIGHT + DistributionAbstract.BOTTOMLEFT));
 	}
 }
